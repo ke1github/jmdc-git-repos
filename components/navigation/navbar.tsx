@@ -6,7 +6,6 @@ import { Menu} from 'lucide-react'
 import { Button } from '@/components/ui/button'
 import { Sheet, SheetContent, SheetTrigger } from '@/components/ui/sheet'
 import React from 'react'
-import { NavigationMenu } from '../ui/navigation-menu'
 
 const navItems = [
   { label: 'About Us', href: '/about' },
