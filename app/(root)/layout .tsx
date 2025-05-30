@@ -1,14 +1,16 @@
-// app/(root)/layout.tsx
-import React from 'react'
+// app/(root)/layout.tsx or app/layout.tsx
 
-export default function RootLayout({
-  children,
-}: {
-  children: React.ReactNode
-}) {
+import '@/app/globals.css'
+import React, { ReactNode } from 'react'
+
+export default function RootLayout({ children }: { children: ReactNode }) {
   return (
-    <>
-      {children}
-    </>
+    <html lang="en">
+      <body>
+      
+        {children}
+      
+      </body>
+    </html>
   )
 }

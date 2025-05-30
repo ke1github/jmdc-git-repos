@@ -1,9 +1,12 @@
+import LaunchingSoonPage from '@/components/LaunchingSoonPage'
 import React from 'react'
 
 const page = () => {
   return (
-    <div>About page</div>
+    <>
+    <LaunchingSoonPage />
+    </>
   )
 }
 
-export default page   
+export default page
