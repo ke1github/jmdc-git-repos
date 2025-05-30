@@ -28,7 +28,7 @@ export default function ContactPage() {
           </div>
           <div>
             <h3 className="font-semibold text-gray-700 mb-1">📍 Address</h3>
-            <p className="text-gray-600">JMDC Energy, Ramgarh, Jharkhand, India</p>
+            <p className="text-gray-600">JMDC Energy, 2B, Prem Residency, Arvind Marg, Near Rounak Bajaj Showroom Bariatu,Ranchi, Jharkhand, India</p>
           </div>
         </div>
 

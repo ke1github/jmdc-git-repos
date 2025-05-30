@@ -45,7 +45,7 @@ export default function Footer() {
           <h4 className="font-semibold text-gray-800 mb-3">Contact</h4>
           <p className="text-sm mb-2">📞 +91 99584 93272</p>
           <p className="text-sm mb-2">📧 mehta.pawan@jmdcenergy.com</p>
-          <p className="text-sm">📍 Ramgarh, Jharkhand, India</p>
+          <p className="text-sm">📍 Ranchi, Jharkhand, India</p>
         </div>
       </div>
 
