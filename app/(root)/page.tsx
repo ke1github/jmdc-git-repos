@@ -93,66 +93,8 @@ export default function HomePage() {
         </div>
       </section>
 
-      {/* 🧱 Featured Products Preview */}
-      <section className="py-10 bg-white">
-        <div className="max-w-7xl mx-auto px-6 text-center">
-          <h2 className="text-3xl md:text-4xl font-bold text-gray-800 mb-4">
-            Our Featured Inverters
-          </h2>
-          <p className="text-gray-600 mb-10 max-w-2xl mx-auto">
-            Designed for reliability, certified for Indian conditions, and built with cutting-edge features.
-          </p>
-
-          <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-8 mb-12">
-            {[
-              {
-                name: 'JMDC-GT 3KW (1-Phase)',
-                image: '/images/inverters/Inv_LSeries.png',
-                bgColor: 'bg-[#fff7ed]',
-                features: ['Grid-tied', 'WiFi', 'IP65'],
-              },
-              {
-                name: 'JMDC-GT 5KW (1-Phase)',
-                image: '/images/inverters/Inv_MSeries.png',
-                bgColor: 'bg-[#fff7ed]',
-                features: ['Grid-tied', 'WiFi', 'IP65'],
-              },
-              {
-                name: 'JMDC-GT 10KW,(3-Phase)',
-                image: '/images/inverters/Inv_NSeries.png',
-                bgColor: 'bg-[#fff7ed]',
-                features: ['Grid-tied', 'WiFi', 'IP65'],
-              },
-              
-            ].map((product, i) => (
-              <div
-                key={i}
-                className={`rounded-2xl p-6 border ${product.bgColor} hover:shadow-lg transition`}
-              >
-                <img
-                  src={product.image}
-                  alt={product.name}
-                  className="mx-auto mb-4 w-[200px] h-[140px] object-contain opacity-80 hover:opacity-100 transition"
-                />
-                <h3 className="text-lg font-semibold text-orange-600 mb-2">{product.name}</h3>
-                <ul className="text-sm text-gray-700 space-y-1">
-                  {product.features.map((f, idx) => (
-                    <li key={idx}>• {f}</li>
-                  ))}
-                </ul>
-              </div>
-            ))}
-          </div>
-
-          <Link
-            href="/products"
-            className="inline-block bg-orange-500 hover:bg-orange-600 text-white font-medium px-6 py-3 rounded-2xl shadow"
-          >
-            View All Products
-          </Link>
-        </div>
-      </section>
-
+      
+      
       {/* 🚀 CTA Section */}
       <section className="py-16 bg-orange-500 text-white text-center">
         <div className="max-w-2xl mx-auto px-6">
@@ -161,10 +103,11 @@ export default function HomePage() {
             Join thousands of smart users who trust JMDC Energy for their solar solutions.
           </p>
           <Button asChild className="bg-white text-orange-600 hover:bg-orange-100 rounded-2xl px-6 py-3 text-base font-semibold shadow">
-            <Link href="/contact">Get a Quote</Link>
+            <Link href="/solutions">Get a Quote</Link>
           </Button>
         </div>
       </section>
+
     </main>
   )
 }

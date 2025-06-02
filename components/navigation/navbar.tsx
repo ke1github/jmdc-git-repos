@@ -49,7 +49,9 @@ export default function Navbar() {
               {item.label}
             </Link>
           ))}
+          
         </nav>
+
 
         {/* Mobile Menu Button */}
         <div className="md:hidden">
