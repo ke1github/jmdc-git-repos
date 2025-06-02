@@ -7,7 +7,7 @@ const projectData = [
     images: [
       '/images/solar-rooftop-1.jpg',
       '/images/solar-rooftop-2.jpg',
-      '/images/solar-rooftop-3.jpg',
+      '/images/solar-rooftop-4.jpg',
     ],
   },
   {
