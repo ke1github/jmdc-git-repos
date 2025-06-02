@@ -1,42 +1,36 @@
-import Image from 'next/image';
-import React from 'react';
+import Image from "next/image";
+import React from "react";
 
 const projectData = [
   {
-    title: 'Solar Rooftop Projects',
+    title: "Solar Rooftop Projects",
     images: [
-      '/images/solar-rooftop-1.jpg',
-      '/images/solar-rooftop-2.jpg',
-      '/images/solar-rooftop-4.jpg',
+      "/images/solar-rooftop-1.jpg",
+      "/images/solar-rooftop-2.jpg",
+      "/images/solar-rooftop-4.jpg",
     ],
   },
   {
-    title: 'Solar Pumping Systems',
+    title: "Solar Pumping Systems",
+    images: ["/images/solar-pumping-1.jpg", "/images/solar-pumping-2.jpg"],
+  },
+  {
+    title: "Solar Street Lighting Systems",
     images: [
-      '/images/solar-pumping-1.jpg',
-      '/images/solar-pumping-2.jpg',
+      "/images/solar-street-light-1.jpg",
+      "/images/solar-street-light-2.jpg",
     ],
   },
   {
-    title: 'Solar Street Lighting Systems',
+    title: "Prestigious Projects",
     images: [
-      '/images/solar-street-light-1.jpg',
-      '/images/solar-street-light-2.jpg',
+      "/images/solar-prestigious-1.jpg",
+      "/images/solar-prestigious-2.jpg",
     ],
   },
   {
-    title: 'Prestigious Projects',
-    images: [
-      '/images/solar-prestigious-1.jpg',
-      '/images/solar-prestigious-2.jpg',
-    ],
-  },
-  {
-    title: 'Other EPC Projects',
-    images: [
-      '/images/solar-others-1.jpg',
-      '/images/solar-others-2.jpg',
-    ],
+    title: "Other EPC Projects",
+    images: ["/images/solar-others-1.jpg", "/images/solar-others-2.jpg"],
   },
 ];
 
@@ -44,7 +38,9 @@ export default function ProjectsPage() {
   return (
     <main className="min-h-screen bg-white text-gray-900">
       <section className="py-12 px-6 md:px-16">
-        <h1 className="text-4xl md:text-5xl font-bold text-orange-600 mb-10">Our EPC Projects</h1>
+        <h1 className="text-4xl md:text-5xl font-bold text-orange-600 mb-10">
+          Our EPC Projects
+        </h1>
         <div className="space-y-12">
           {projectData.map((category, index) => (
             <div key={index} className="space-y-4">
