@@ -11,7 +11,7 @@ export default function HomePage() {
     <main className="w-full bg-white text-gray-900">
 
       {/* 🛰️ Branded Welcome Banner */}
-      <section className="relative w-full bg-gradient-to-br from-orange-50 via-white to-orange-100 py-12">
+      <section className="relative w-full bg-gradient-to-br from-orange-50 via-white to-orange-100 py-10">
         <div className="max-w-7xl mx-auto px-4 sm:px-6">
           <div className="rounded-2xl overflow-hidden shadow-xl ring-1 ring-orange-100">
             <motion.div
@@ -106,23 +106,24 @@ export default function HomePage() {
           <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-8 mb-12">
             {[
               {
-                name: 'JMDC-GT 3KW',
+                name: 'JMDC-GT 3KW (1-Phase)',
                 image: '/images/inverters/Inv_LSeries.png',
                 bgColor: 'bg-[#fff7ed]',
                 features: ['Grid-tied', 'WiFi', 'IP65'],
               },
               {
-                name: 'JMDC-HY 5KW',
-                image: '/images/inverters/hybrid5kw.png',
-                bgColor: 'bg-[#e0f2fe]',
-                features: ['Hybrid', 'Battery Ready', 'LCD'],
+                name: 'JMDC-GT 5KW (1-Phase)',
+                image: '/images/inverters/Inv_MSeries.png',
+                bgColor: 'bg-[#fff7ed]',
+                features: ['Grid-tied', 'WiFi', 'IP65'],
               },
               {
-                name: 'JMDC-OFF 2KW',
-                image: '/images/inverters/offgrid2kw.png',
-                bgColor: 'bg-[#f3e8ff]',
-                features: ['Off-grid', 'MPPT', 'Rugged'],
+                name: 'JMDC-GT 10KW,(3-Phase)',
+                image: '/images/inverters/Inv_NSeries.png',
+                bgColor: 'bg-[#fff7ed]',
+                features: ['Grid-tied', 'WiFi', 'IP65'],
               },
+              
             ].map((product, i) => (
               <div
                 key={i}

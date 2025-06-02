@@ -14,18 +14,18 @@ const products = [
     bg: 'bg-orange-50',
   },
   {
-    name: 'JMDC-HY 5KW',
+    name: 'JMDC-M5000, 5KW',
     image: '/images/inverters/Inv_MSeries.png',
-    features: ['Hybrid Inverter', 'Battery Ready', 'LCD Display', 'Remote Monitoring'],
-    datasheet: '/pdf/datasheets/jmdc-hy5kw.pdf',
-    bg: 'bg-sky-50',
+    features: ['Grid-tied', 'WiFi Enabled', 'IP65', 'BIS Certified'],
+    datasheet: '/pdf/datasheets/jmdc-gt3kw.pdf',
+    bg: 'bg-orange-50',
   },
   {
-    name: 'JMDC-OFF 2KW',
+   name: 'JMDC-N10K, 10KW',
     image: '/images/inverters/Inv_NSeries.png',
-    features: ['Off-grid', 'MPPT Based', 'Low Voltage Start', 'Rugged Design'],
-    datasheet: '/pdf/datasheets/jmdc-off2kw.pdf',
-    bg: 'bg-violet-50',
+    features: ['Grid-tied', 'WiFi Enabled', 'IP65', 'BIS Certified'],
+    datasheet: '/pdf/datasheets/jmdc-gt3kw.pdf',
+    bg: 'bg-orange-50',
   },
 ]
 

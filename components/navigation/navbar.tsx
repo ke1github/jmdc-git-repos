@@ -35,7 +35,7 @@ export default function Navbar() {
            priority
           />
 
-          <span className="text-lg font-bold text-orange-500 tracking-wide">JMDC Energy</span>
+          <span className="text-lg font-bold text-orange-500 tracking-wide justify-center">JMDC Energy</span>
         </Link>
 
         {/* Desktop Navigation */}
