@@ -6,10 +6,9 @@ import { Button } from "@/components/ui/button";
 import { Download } from "lucide-react";
 import Link from "next/link";
 import React, { useState } from "react";
-import { useRouter } from "next/navigation";
+import { toast } from "sonner";
 
 export default function ProductsPage() {
-  const router = useRouter();
   const [form, setForm] = useState({
     name: "",
     email: "",
@@ -28,13 +27,29 @@ export default function ProductsPage() {
   const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
 
-    await fetch("/api/quote", {
-      method: "POST",
-      headers: { "Content-Type": "application/json" },
-      body: JSON.stringify(form),
-    });
+    try {
+      const res = await fetch("/api/quote", {
+        method: "POST",
+        headers: { "Content-Type": "application/json" },
+        body: JSON.stringify(form),
+      });
 
-    router.push("/thank-you");
+      if (res.ok) {
+        toast.success("Quote request sent successfully!");
+        setForm({
+          name: "",
+          email: "",
+          contact: "",
+          message: "",
+          pincode: "",
+          organization: "",
+        });
+      } else {
+        toast.error("Failed to send quote request.");
+      }
+    } catch {
+      toast.error("Something went wrong. Please try again.");
+    }
   };
 
   return (
