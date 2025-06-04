@@ -16,6 +16,7 @@ export default function ProductsPage() {
     organization: "",
     pincode: "",
     message: "",
+    reference: "",
   });
 
   const handleChange = (
@@ -43,6 +44,7 @@ export default function ProductsPage() {
           message: "",
           pincode: "",
           organization: "",
+          reference: "",
         });
       } else {
         toast.error("Failed to send quote request.");
@@ -113,6 +115,13 @@ export default function ProductsPage() {
               value={form.pincode}
               onChange={handleChange}
             />
+            <Input
+              name="reference"
+              type="text"
+              placeholder="Sales Manager Reference (if any)"
+              value={form.reference}
+              onChange={handleChange}
+            />
             <textarea
               name="message"
               rows={4}
@@ -149,6 +158,13 @@ export default function ProductsPage() {
             className="inline-flex items-center gap-2 px-6 py-3 bg-green-600 text-white font-medium rounded-full hover:bg-green-700"
           >
             <Download className="w-5 h-5" /> BIS Certificate
+          </Link>
+
+          <Link
+            href="/api/download-pricelist"
+            className="inline-flex items-center gap-2 px-6 py-3 bg-blue-600 text-white font-medium rounded-full hover:bg-blue-700"
+          >
+            <Download className="w-5 h-5" /> Price List
           </Link>
         </div>
       </section>
