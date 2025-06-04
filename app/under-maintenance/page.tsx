@@ -33,7 +33,7 @@ export default function MaintenancePage() {
       {/* Main Text */}
       <div className="z-30">
         <h1 className="text-4xl md:text-5xl font-bold mb-4 text-orange-600 drop-shadow-md">
-          We&apos;re Under Maintenance
+         This Page is Under Maintenance
         </h1>
         <p className="text-gray-700 max-w-xl mx-auto text-base md:text-lg mb-4">
           Our website is temporarily offline for upgrades. We&apos;ll be back in <strong className="text-black">48 hours</strong> with an ultra-modern solar experience.
