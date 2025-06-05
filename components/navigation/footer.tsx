@@ -8,25 +8,22 @@ export default function Footer() {
   const [visits, setVisits] = useState<number | null>(null);
 
   useEffect(() => {
-    if (
-      typeof window !== "undefined" &&
-      window.location.hostname !== "localhost"
-    ) {
-      const fetchVisits = async () => {
-        try {
-          const res = await fetch(
-            "https://api.countapi.xyz/hit/jmdcenergy.com/visits"
-          );
-          if (!res.ok) throw new Error("Request failed");
-          const data = await res.json();
-          setVisits(data.value);
-        } catch (err) {
-          console.error("Visitor count fetch failed:", err);
+    const fetchVisitorCount = async () => {
+      try {
+        const res = await fetch("/api/visitor");
+        const data = await res.json();
+        if (data?.count) {
+          setVisits(data.count);
+        } else {
+          setVisits(0);
         }
-      };
+      } catch (error) {
+        console.error("Visitor fetch error:", error);
+        setVisits(0);
+      }
+    };
 
-      fetchVisits();
-    }
+    fetchVisitorCount();
   }, []);
 
   return (
@@ -102,14 +99,14 @@ export default function Footer() {
         </div>
       </div>
 
-      {/* Bottom Bar */}
-      <div className="bg-gray-200 text-center py-3 text-xs text-gray-600">
+      {/* Visitor + Copyright */}
+      <div className="flex flex-col items-center border-t border-gray-200 bg-white py-4 gap-1 text-sm text-gray-600">
         <div>
-          © {new Date().getFullYear()} JMDC Energy. All rights reserved.
-        </div>
-        <div className="mt-1">
           👁️ Total Visitors:{" "}
           {visits !== null ? visits.toLocaleString() : "Loading..."}
+        </div>
+        <div className="text-xs text-gray-500">
+          © {new Date().getFullYear()} JMDC Energy. All rights reserved.
         </div>
       </div>
     </footer>
