@@ -8,6 +8,11 @@ const redis = new Redis({
 
 export async function GET() {
   try {
+    // ✅ Don't increment if running locally
+    if (process.env.NODE_ENV !== "production") {
+      return NextResponse.json({ count: 0 });
+    }
+
     const count = await redis.incr("jmdc:visitor:count");
     return NextResponse.json({ count });
   } catch (error) {
