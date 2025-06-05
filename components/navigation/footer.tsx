@@ -8,22 +8,14 @@ export default function Footer() {
   const [visits, setVisits] = useState<number | null>(null);
 
   useEffect(() => {
-    const fetchVisitorCount = async () => {
-      try {
-        const res = await fetch("/api/visitor");
-        const data = await res.json();
-        if (data?.count) {
-          setVisits(data.count);
-        } else {
-          setVisits(0);
-        }
-      } catch (error) {
-        console.error("Visitor fetch error:", error);
+    fetch("/api/visitor")
+      .then((res) => res.json())
+      .then((data) => {
+        setVisits(data.count || 0);
+      })
+      .catch(() => {
         setVisits(0);
-      }
-    };
-
-    fetchVisitorCount();
+      });
   }, []);
 
   return (
@@ -99,14 +91,13 @@ export default function Footer() {
         </div>
       </div>
 
-      {/* Visitor + Copyright */}
-      <div className="flex flex-col items-center border-t border-gray-200 bg-white py-4 gap-1 text-sm text-gray-600">
-        <div>
+      <div className="flex flex-col items-center border-t border-gray-200 bg-white py-4">
+        <div className="text-xs text-gray-600">
+          © {new Date().getFullYear()} JMDC Energy. All rights reserved.
+        </div>
+        <div className="text-sm text-gray-600 mt-1">
           👁️ Total Visitors:{" "}
           {visits !== null ? visits.toLocaleString() : "Loading..."}
-        </div>
-        <div className="text-xs text-gray-500">
-          © {new Date().getFullYear()} JMDC Energy. All rights reserved.
         </div>
       </div>
     </footer>
