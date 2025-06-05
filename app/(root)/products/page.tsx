@@ -56,7 +56,7 @@ export default function ProductsPage() {
 
   return (
     <main className="min-h-screen w-full">
-      <div className="w-full h-screen relative">
+      <div className="w-full h-[60vh] relative">
         <Image
           src="/images/jmdc-products.png"
           alt="JMDC Product Showcase"
